@@ -1,0 +1,10 @@
+# we are passing the variables through command line 
+# By passing through special variables make sure to give in ""
+
+
+- name: "configure {{ component }}"
+  become: yes
+  hosts: "{{ component }}"
+  roles: # this will automatically load a folder called roles in current working directory.
+  - "{{ component }}"
+
